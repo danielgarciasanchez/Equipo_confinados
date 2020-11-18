@@ -1,3 +1,3 @@
 #!/bin/bash
-echo '#!/bin/bash'
-echo "`whoami` $(date)"
+echo '#!/bin/bash' > 005.out
+echo "`whoami` $(date)" >> 005.out
