@@ -19,6 +19,8 @@ read -p "Nombre del equipo a comparar: " team
 # Clono el repo del equipo que quiero a ref_repo
 git clone ${repos[$team]} ref_repo
 
+
+# !!! FALTA HACERLO CON FIND (find *.out nos lista todo, pero no sé cómo se guarda en una variable)
 declare -a string=(001.out 002.out 003.out 004.out 005.out 006.out)
 
 for archivo in $string
