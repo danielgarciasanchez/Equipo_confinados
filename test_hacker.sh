@@ -14,5 +14,10 @@ repos[los bashers]='https://github.com/JoaquinLou/Los-Bashers.git'
 
 # Prompt preguntando por el equipo
 read -p "Nombre del equipo a comparar: " team
-echo ${repos[$team]}
-#git clone repos[$team] ref_repo
+
+# Clono el repo del equipo que quiero a ref_repo
+git clone ${repos[$team]} ref_repo
+
+
+
+
