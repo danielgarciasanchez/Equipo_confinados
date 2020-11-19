@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Crear nueva carpeta ref_repo
-mkdir ./ref_repo
+folder="ref_repo"
+mkdir $folder
 
 # Dictcionarios con direcciones de los equipos
 declare -A repos
@@ -36,7 +37,7 @@ fi
 #fi
 done
 
-rm -rf ref_repo
+rm -rf $folder
 
 
 
