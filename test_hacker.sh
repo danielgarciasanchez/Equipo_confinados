@@ -18,22 +18,25 @@ read -p "Nombre del equipo a comparar: " team
 # Clono el repo del equipo que quiero a ref_repo
 git clone ${repos[$team]} ref_repo
 
-declare -a string= (001.out 002.out 003.out 004.out 005.out 006.out)
+declare -a string=(001.out 002.out 003.out 004.out 005.out 006.out)
 
 for archivo in $string
 do
-if [ -s ref_repo/"$archivo" ] 
-then
+echo $archivo
+#if [ -s ref_repo/"$archivo" ] 
+#then
 if diff $archivo ref_repo/$archivo
 then
 echo "Nuestro $archivo es igual al otro $archivo"
 else
 echo "Nuestro $archivo es diferente al otro $archivo"
 fi
-else
-echo "El archivo $archivo está vacío"
-fi
+#else
+#echo "El archivo $archivo está vacío"
+#fi
 done
+
+rm -rf ref_repo
 
 
 
