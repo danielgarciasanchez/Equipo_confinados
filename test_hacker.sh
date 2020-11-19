@@ -2,6 +2,7 @@
 
 # Crear nueva carpeta ref_repo
 echo mkdir ./ref_repo
+cd ref_repo
 
 # Dictcionarios con direcciones de los equipos
 echo declare -A repos
