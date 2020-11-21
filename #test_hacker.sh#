@@ -24,26 +24,28 @@ git clone ${repos[$team]} ref_repo
 
 
 
-#Solución propuesta por Esteban, uso cmp mejor que diff
-archivos=(*.out)
-for archivo in "${archivos[@]}"
+
+
+
+declare -a string=(001.out 002.out 003.out 004.out 005.out 006.out)
+
+for archivo in $string
 do
-if [ -s ref_repo/"$archivo" ] 
-then	
-if cmp -s $archivo ref_repo/$archivo
+echo $archivo
+#if [ -s ref_repo/"$archivo" ] 
+#then
+if diff $archivo ref_repo/$archivo
 then
 echo "Nuestro $archivo es igual al otro $archivo"
 else
 echo "Nuestro $archivo es diferente al otro $archivo"
 fi
-else
-echo "El archivo $archivo está vacío"
-fi
+#else
+#echo "El archivo $archivo está vacío"
+#fi
 done
 
-
-
-
+rm -rf $folder
 
 
 
