@@ -41,6 +41,7 @@ echo "El archivo $archivo está vacío"
 fi
 done
 
+rm -rf $folder
 
 
 
